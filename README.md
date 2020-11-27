@@ -1,6 +1,4 @@
 Until I can figure out how to do this purely:
 
-* Build the plugin with the Nix file
-* `chmod -R +w` the resulting build
-* Run `install.sh`
-* Delete the temporary build
+* `nix-build -E '((import <nixpkgs> {}).callPackage (import ./u-he-diva.nix) { })'` (for example)
+* Locate and run `install.sh` inside `result` (then delete `result`) => plugin is in your `$HOME`

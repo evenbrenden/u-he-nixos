@@ -8,5 +8,5 @@ Until I can figure out how to do this purely:
 * Install the plugin to your `$HOME`:
     * `$ ./build/lib/vst/install.sh`
 * Clean up:
-    * `# rm -rf result`
-    * `$ rm -rf build`
+    * `$ rm -r result`
+    * `$ rm -r build`

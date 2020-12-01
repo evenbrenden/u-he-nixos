@@ -1,4 +1,4 @@
-U-He plugin installer for NixOS
+<h1>U-He plugin installer for NixOS</h1>
 
 Example usage: `install.sh u-he-diva.nix`
 

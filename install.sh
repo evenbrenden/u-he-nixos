@@ -15,6 +15,6 @@ fi
 nix-build -E "((import <nixpkgs> {}).callPackage (import ./$PACKAGE) {})"
 cp -r result/ build
 chmod -R +w build
-./build/lib/vst/install.sh
+./build/lib/install.sh
 rm -r result
 rm -r build

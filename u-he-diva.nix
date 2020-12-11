@@ -11,7 +11,7 @@ stdenv.mkDerivation rec {
   buildInputs = [ expat libuuid glib gtk3 ];
 
   installPhase = ''
-    mkdir -p $out/lib/vst
-    cp -r . $out/lib/vst
+    mkdir -p $out/lib
+    cp -r . $out/lib
   '';
 }

@@ -1,15 +1,6 @@
-{ pkgs,
-  stdenv,
-  autoPatchelfHook,
-  expat,
-  libuuid,
-  glib,
-  gtk3,
-  pluginName,
-  pluginUrl,
-  pluginSha256 }:
+{ pkgs, stdenv, autoPatchelfHook, expat, libuuid, glib, gtk3, pluginName, pluginUrl, pluginSha256 }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation {
 
   name = pluginName;
   src = pkgs.fetchurl {

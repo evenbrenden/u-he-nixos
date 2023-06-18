@@ -12,7 +12,7 @@ if [[ ! -f $PACKAGE ]]; then
     exit 1
 fi
 
-nix-build $PACKAGE
+nix-build "$PACKAGE"
 cp -r result/ build
 chmod -R +w build
 ./build/lib/install.sh

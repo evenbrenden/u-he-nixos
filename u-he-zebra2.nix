@@ -2,8 +2,8 @@ with import <nixpkgs> { };
 
 let
   name = "u-he-zebra2";
-  url = "https://www.u-he.com/downloads/linux/beta/9775/Zebra2_291_9775_Linux.tar.xz";
-  sha256 = "09i2shw0h9a5654hd61qrnrgm91ksbricy0152nciddhjq3h8r59";
+  url = "https://uhe-dl.b-cdn.net/releases/Zebra2_293_12092_Linux.tar.xz";
+  sha256 = "sha256-/faBEP9zAYbo9J/1RAWrLrrE6OKnGqQrgxE/eYMCtsY=";
 in pkgs.callPackage (import ./common.nix) {
   pluginName = name;
   pluginUrl = url;

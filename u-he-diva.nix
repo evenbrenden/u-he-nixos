@@ -2,8 +2,8 @@ with import <nixpkgs> { };
 
 let
   name = "u-he-diva";
-  url = "https://www.u-he.com/downloads/linux/beta/9775/Diva_144_9775_Linux.tar.xz";
-  sha256 = "0dz5mrnxqvj28kbhsvjnq341l8k5zhh3ncw13pzpk8wcffqk16qs";
+  url = "https://dl.u-he.com/releases/Diva_145_12092_Linux.tar.xz";
+  sha256 = "sha256-xyTQGVj7rHyrENFZEUe+U+7dfjdmSD973mE63ThfSfY=";
 in pkgs.callPackage (import ./common.nix) {
   pluginName = name;
   pluginUrl = url;

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 if [[ $# -ne 1 ]]; then
     echo "Usage: install.sh [package file]"
     exit 1

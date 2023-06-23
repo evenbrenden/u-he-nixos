@@ -1,6 +1,6 @@
 # u-he-nixos
 
-u-he Linux plugins seem to use hardcoded paths to `~/.u-he` for resources (like fonts and images) at runtime. I haven't figured out how to patch that, so here's an impure u-he plugin installer for NixOS.
+u-he Linux plugins seem to use hardcoded paths to `~/.u-he` for resources (like images and licenses) at runtime. I haven't figured out how to patch that, so here's an impure u-he plugin installer for NixOS.
 
 Example usage: `install.sh u-he-diva.nix`
 

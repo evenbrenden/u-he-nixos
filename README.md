@@ -9,4 +9,4 @@ How it works:
 1. The derivation is built using a set of dependencies that are common to all plugins.
 2. The plugin is installed to your home directory using the shipped installer. Because it is not installed to your Nix store, you run the risk of dependencies being garbage collected. This also means that the plugin must be uninstalled manually.
 
-Ideally, resources would be referenced from the Nix store, while settings would be stored in `~/.u-he`. Secret licenses could be in either of those.
+Note that `~/.u-he` is also used for user settings and licenses.

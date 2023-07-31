@@ -1,3 +1,6 @@
+# Note that Uhbik VST3 plugins crash on load (tested with REAPER).
+# Not sure if this is an issue with the source or this installer.
+
 with import <nixpkgs> { };
 
 let

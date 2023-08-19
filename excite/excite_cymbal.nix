@@ -7,6 +7,7 @@ pkgs.callPackage (import ./common.nix) {
   pluginHomePage    = "https://www.chair.audio/product/excite_cymbal/";
   pluginDescription = "Physical modeling cymbal VST3 Plugin";
   pluginUnpackPhase = "";
+  pluginVersion     = "1.0.0";
   pluginSourceRoot  = "";
 }
 

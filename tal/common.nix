@@ -1,5 +1,6 @@
 {
   stdenv,
+  pkgs,
   lib,
   fetchurl,
   freetype,
@@ -12,6 +13,7 @@
   pluginSourceRoot,
   pluginDescription,
   pluginUnpackPhase,
+  pluginVersion,
   ...
 }:
 
@@ -32,8 +34,6 @@ stdenv.mkDerivation rec {
     freetype
     stdenv.cc.cc.lib
   ];
-
-  buildInputs = [ freetype stdenv.cc.cc.lib ];
 
   installPhase = ''
     mkdir -p $out/

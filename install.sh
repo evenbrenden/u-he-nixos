@@ -17,7 +17,7 @@ PLUGIN_NAME="${NIX_FILE%.*}" # Filename without ".nix" extension and path
 
 
 # ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-# U-he install                                              
+# U-he install
 # ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 if [[ $PLUGIN_TYPE == "u-he" || $PLUGIN_TYPE == "./u-he" ]]; then
 	set -e
@@ -31,7 +31,18 @@ if [[ $PLUGIN_TYPE == "u-he" || $PLUGIN_TYPE == "./u-he" ]]; then
 fi
 
 # ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-# EXCITE, TAL install                                       
+# OB-XD Install
+# ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+if [[ $PLUGIN_TYPE == "obxd" || $PLUGIN_TYPE == "./obxd" ]]; then
+	export NIXPKGS_ALLOW_UNFREE=1
+	nix-build $1
+	ln -sf $(realpath result)/ ~/.vst/$PLUGIN_NAME
+	rm -r ./result
+	exit 0
+fi
+
+# ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# EXCITE, TAL install
 # ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 export NIXPKGS_ALLOW_UNFREE=1
 nix-build $1

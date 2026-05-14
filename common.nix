@@ -1,4 +1,5 @@
-{ pkgs, stdenv, autoPatchelfHook, expat, libuuid, glib, gtk3, pluginName, pluginUrl, pluginSha256 }:
+{ pkgs, stdenv, autoPatchelfHook, expat, libuuid, libxcb-keysyms, libxcb-util, glib, gtk3, pluginName, pluginUrl
+, pluginSha256 }:
 
 stdenv.mkDerivation {
 
@@ -9,7 +10,7 @@ stdenv.mkDerivation {
   };
 
   nativeBuildInputs = [ autoPatchelfHook ];
-  buildInputs = [ expat libuuid glib gtk3 ];
+  buildInputs = [ expat libuuid libxcb-keysyms libxcb-util glib gtk3 ];
 
   installPhase = ''
     mkdir -p $out/lib

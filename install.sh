@@ -6,18 +6,11 @@ set -e
 trap "{ rm -rf result; rm -rf build; }" EXIT
 
 if [[ "$#" -ne 1 ]]; then
-    echo "Usage: install.sh [package file]"
+    echo "Usage: install.sh [flake output/plugin name]"
     exit 1
 fi
 
-PACKAGE="$1"
-
-if [[ ! -f "$PACKAGE" ]]; then
-    echo "$PACKAGE not found"
-    exit 1
-fi
-
-nix-build "$PACKAGE"
+nix build ".#$1"
 cp -r result/. build
 chmod -R +w build
 ./build/lib/install.sh

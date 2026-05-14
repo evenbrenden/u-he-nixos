@@ -1,4 +1,4 @@
-with import <nixpkgs> { };
+{ pkgs }:
 
 let
   name = "u-he-diva";

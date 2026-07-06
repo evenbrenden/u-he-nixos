@@ -1,16 +1,16 @@
 {
   description = "u-he-nixos";
-
   inputs.nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-
-  outputs = { self, nixpkgs }:
-    let pkgs = nixpkgs.legacyPackages.x86_64-linux;
-    in {
-      packages.x86_64-linux = {
-        diva = import ./diva.nix { inherit pkgs; };
-        satin = import ./satin.nix { inherit pkgs; };
-        uhbik = import ./uhbik.nix { inherit pkgs; };
-        zebra2 = import ./zebra2.nix { inherit pkgs; };
-      };
+  outputs =
+    { self, nixpkgs }:
+    let
+      pkgs = nixpkgs.legacyPackages.x86_64-linux;
+      common = import ./common.nix;
+      plugins = import ./plugins.nix;
+    in
+    {
+      packages.x86_64-linux = builtins.mapAttrs (
+        name: args: pkgs.callPackage common (args // { pluginName = "u-he-${name}"; })
+      ) plugins;
     };
 }

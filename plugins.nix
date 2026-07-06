@@ -56,4 +56,31 @@
     url = "https://u-he.com/downloads/releases/Uhbik_200_19684_Linux.tar.xz";
     hash = "sha256-XJN08jE3xo8KKh3zCDEhkjju/G+4nND/H53tY3sPOTY=";
   };
+
+  # Freeware
+  zebralette3 = {
+    url = "https://dl.u-he.com/releases/Zebralette3_300_20399_Linux.tar.xz";
+    hash = "sha256-3zTRzOZxJwKJTTy97/HDq3RlFCY407zILIbrXuAuxYA=
+";
+  };
+  podolski = {
+    url = "https://dl.u-he.com/releases/Podolski_123_12092_Linux.tar.xz";
+    hash = "sha256-fd5+m3eYCyeF0PMX5RUNkPPnlHRBlVt1Gn+NAnoz8SY=";
+  };
+  triplecheese = {
+    url = "https://dl.u-he.com/releases/TripleCheese_13_12092_Linux.tar.xz";
+    hash = "sha256-BOoSM/1kFzdGSAyF5mLz6B0+SMEUnKQZ+JohboUPs8Q=";
+  };
+  bazillecm = {
+    url = "https://dl.u-he.com/releases/BazilleCM_101_12185_Linux.tar.xz";
+    hash = "sha256-D7B7x/7/YwHKH1ZTuWhKhRfVxkKIDJO3Bu36JnQ1otg=";
+  };
+  tyrelln6 = {
+    url = "https://dl.u-he.com/releases/TyrellN6_300_public_beta_16976_Linux.tar.xz";
+    hash = "sha256-TXpOvRJNwvNB2fU7xYWwylCIBqzMMkab/hha6ZukyRY=";
+  };
+  protoverb = {
+    url = "https://dl.u-he.com/releases/Protoverb_101_12092_Linux.tar.xz";
+    hash = "sha256-eyxia3SaKifwqu7+Xn+sQ1ZeHfLlqU8rR6AsYpoKJtA=";
+  };
 }

@@ -7,6 +7,7 @@ trap "rm -rf result build" EXIT
 
 if [[ $# -ne 1 ]]; then
     echo "Usage: $0 [flake output/plugin name]"
+    nix eval --raw .#packages.x86_64-linux --apply 'plugin_name: builtins.concatStringsSep "\n" (builtins.attrNames plugin_name)'
     exit 1
 fi
 

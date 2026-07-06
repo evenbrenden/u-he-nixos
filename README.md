@@ -5,7 +5,7 @@ From what I gather, u-he Linux plugins use hardcoded paths to `~/.u-he` for reso
 ## Example usage
 
 ```
-./install.sh u-he-diva.nix
+./install.sh diva
 ```
 
 ## How it works
